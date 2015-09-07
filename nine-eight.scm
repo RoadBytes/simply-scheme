@@ -1,0 +1,5 @@
+(define (hang word-to-guess guesses)
+  (let ((hang-letter (lambda (letter) (if (member? letter guesses) letter '-))))
+    (accumulate word (every hang-letter word-to-guess))
+  )
+)
